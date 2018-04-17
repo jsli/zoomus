@@ -40,6 +40,10 @@ class ZoomClientV2(util.ApiClient):
         self.components = {
             'user': components_v2.user.UserComponentV2(
                 base_uri=ZoomClientV2.BASE_URI, config=self.config),
+            'meetings': components_v2.meeting.MeetingComponentV2(
+                base_uri=ZoomClientV2.BASE_URI, config=self.config),
+            'recording': components_v2.recording.RecordingComponentV2(
+                base_uri=ZoomClientV2.BASE_URI, config=self.config),
         }
 
     def __enter__(self):
