@@ -5,7 +5,8 @@ from __future__ import absolute_import
 from . import (
     user,
     meeting,
-    recording
+    recording,
+    report
     )
 
 __author__ = "Manson Li"
