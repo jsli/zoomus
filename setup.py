@@ -25,20 +25,20 @@ def find_version(file_paths):
     raise RuntimeError("Unable to find version string.")
 
 
-description = 'Python client library for Zoom.us REST API'
+description = 'Python client library for Zoom.us REST API v1&v2'
 long_description = read('README.md', default=description)
 
 setup(
     name='zoomus',
     version=find_version(['zoomus', '__init__.py']),
-    url='http://github.com/actmd/zoomus/',
+    url='http://github.com/jsli/zoomus/',
     license='Apache Software License',
-    author='Patrick R. Schmid',
+    author='Patrick R. Schmid, Manson Li',
     install_requires=['requests'],
-    author_email='prschmid@act.md',
+    author_email='prschmid@act.md, manson.li3307@gmail.com',
     description=description,
     long_description=long_description,
-    packages=['zoomus', 'zoomus.components'],
+    packages=['zoomus', 'zoomus.components', 'zoomus.components_v2'],
     include_package_data=True,
     platforms='any',
     zip_safe=False,

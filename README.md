@@ -1,27 +1,20 @@
-zoomus
+zoomus v1&v2
 ==========
-![](https://travis-ci.org/actmd/zoomus.svg?branch=master)
 
-[http://github.com/actmd/zoomus](http://github.com/actmd/zoomus)
+V2 extension for [http://github.com/actmd/zoomus](http://github.com/actmd/zoomus)
 
-Python wrapper around the [Zoom.us](http://zoom.us) REST API.
+Python wrapper around the [Zoom.us](http://zoom.us) REST API v1&v2.
 
-This work is heavily inspired by the Ruby GEM of the same name, [Zoomus](https://github.com/mllocs/zoomus)
 
 Installation
 ------------
 
-### The easy way
-
-```sh
-pip install zoomus
-```
-
 ### The developer way
 
 ```sh
-git clone git@github.com:actmd/zoomus.git
+git clone git@github.com:jsli/zoomus.git
 cd zoomus
+git checkout -b develop origin/develop
 python setup.py install
 ```
 
