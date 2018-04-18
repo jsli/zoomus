@@ -6,7 +6,8 @@ from . import (
     user,
     meeting,
     recording,
-    report
+    report,
+    webinar
     )
 
 __author__ = "Manson Li"

@@ -39,10 +39,18 @@ class MeetingComponentV2(base.BaseComponentV2):
 
     def add_registrants(self, meeting_id, **kwargs):
         util.require_keys(kwargs, ['email', 'first_name', 'last_name'])
-        params = {'occurrence_ids': kwargs['occurrence_ids']} if 'occurrence_ids' in kwargs else {}
+        if 'occurrence_ids' in kwargs:
+            params = {'occurrence_ids': kwargs['occurrence_ids']}
+            kwargs.pop('occurrence_ids')
+        else:
+            params = {}
         return self.post_request("/meetings/%s/registrants" % meeting_id, params=params, data=kwargs)
 
-    def update_registrants(self, meeting_id, **kwargs):
+    def update_registrant_status(self, meeting_id, **kwargs):
         util.require_keys(kwargs, 'action')
-        params = {'occurrence_id': kwargs['occurrence_id']} if 'occurrence_id' in kwargs else {}
-        return self.put_request("/meetings/%s/registrants" % meeting_id, params=params, data=kwargs)
+        if 'occurrence_id' in kwargs:
+            params = {'occurrence_id': kwargs['occurrence_id']}
+            kwargs.pop('occurrence_id')
+        else:
+            params = {}
+        return self.put_request("/meetings/%s/registrants/status" % meeting_id, params=params, data=kwargs)

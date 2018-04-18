@@ -1,4 +1,4 @@
-"""Zoom.us REST API Python Client -- Meeting component"""
+"""Zoom.us REST API Python Client -- Recording component"""
 
 from __future__ import absolute_import
 
@@ -11,7 +11,7 @@ __email__ = "manson.li3307@gmail.com"
 
 
 class RecordingComponentV2(base.BaseComponentV2):
-    """Component dealing with all meeting related matters"""
+    """Component dealing with all recording related matters"""
 
     def list(self, user_id, **kwargs):
         util.require_keys(kwargs, ['from', 'to'])

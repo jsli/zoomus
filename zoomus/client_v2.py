@@ -46,6 +46,8 @@ class ZoomClientV2(util.ApiClient):
                 base_uri=ZoomClientV2.BASE_URI, config=self.config),
             'report': components_v2.report.ReportComponentV2(
                 base_uri=ZoomClientV2.BASE_URI, config=self.config),
+            'webinar': components_v2.webinar.WebinarComponentV2(
+                base_uri=ZoomClientV2.BASE_URI, config=self.config),
         }
 
     def __enter__(self):

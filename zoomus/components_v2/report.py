@@ -1,4 +1,4 @@
-"""Zoom.us REST API Python Client -- Meeting component"""
+"""Zoom.us REST API Python Client -- Report component"""
 
 from __future__ import absolute_import
 
@@ -11,7 +11,7 @@ __email__ = "manson.li3307@gmail.com"
 
 
 class ReportComponentV2(base.BaseComponentV2):
-    """Component dealing with all meeting related matters"""
+    """Component dealing with all report related matters"""
 
     def daily(self, **kwargs):
         return self.get_request("/report/daily", params=kwargs)
