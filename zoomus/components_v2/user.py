@@ -24,8 +24,8 @@ class UserComponentV2(base.BaseComponentV2):
 
         user_info = kwargs['user_info']
         util.require_keys(user_info, ['email', 'type'])
-        user_type_values = [1, 2, 3]
-        if int(user_info['type']) not in user_type_values:
+        user_type_values = [1, '1', 2, '2', 3, '3']
+        if user_info['type'] not in user_type_values:
             raise ValueError("'user_info.type' must be one of {}".format(user_type_values))
 
         return self.post_request("/users", data=kwargs)

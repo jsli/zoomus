@@ -36,10 +36,10 @@ class RecordingComponentV2(base.BaseComponentV2):
         action_values = ['recover']
         if ('action' in kwargs) and (kwargs['action'] not in action_values):
             raise ValueError("'action' must be one of {}".format(action_values))
-        return self.put_request("/meetings/%s/recordings" % meeting_id, params=kwargs)
+        return self.put_request("/meetings/%s/recordings/status" % meeting_id, params=kwargs)
 
     def recover(self, meeting_id, recording_id, **kwargs):
         action_values = ['recover']
         if ('action' in kwargs) and (kwargs['action'] not in action_values):
             raise ValueError("'action' must be one of {}".format(action_values))
-        return self.put_request("/meetings/%s/recordings/%s" % (meeting_id, recording_id), params=kwargs)
+        return self.put_request("/meetings/%s/recordings/%s/status" % (meeting_id, recording_id), params=kwargs)
